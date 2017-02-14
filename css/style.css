@@ -1673,9 +1673,10 @@ form label.error {
 	float: left;
 	text-align: left;
 	display: inline-block;
+    width: 150px;
 }
 .logo a {
-	width: 100px;
+	width: 160px;
 	display: block;
 	margin-top: 29px;
 	margin-bottom: 28px;
@@ -2625,7 +2626,7 @@ ul.icon-tab-nav li, .icon-tab-nav ul li {
 /*margin-left: 5px;*/
     }
 .pricing-price .pricing-price-lg {
-	font-size: 35px;
+	font-size: 15px;
 	font-weight: 300;
 }
 .pricing-features {
