@@ -1,0 +1,81 @@
+#styler { width:250px; height:605px; position:fixed; top:50%; right:-250px; margin-top:-302px; background:#FFF; border-radius:5px 0 0 5px; z-index:99999; transition:.4s ease; }
+#styler .toggle { width:50px; height:100%; position:absolute; top:0; left:-50px; transition:.2s ease; }
+#styler .toggle a { width:50px; height:50px; font-size:20px; color:#FFF; text-align:center; line-height:50px; background:#333; position:absolute; top:50%; left:0; margin-top:-25px; border-radius:5px 0 0 5px; }
+#styler .stylersection { padding:15px 30px; border-top:1px solid #E5E5E5; }
+#styler .stylersection:first-child { border:none; }
+#styler .stylersection:after { content:""; display:block; clear:both; }
+#styler .stylersection span { float:left; margin-left:10px; border-radius:3px; cursor:pointer; opacity:.15; position:relative; transition:.2s ease; }
+#styler .stylersection span:before { content:''; width:100%; height:100%; padding:2px; position:absolute; top:-3px; left:-3px; border-radius:3px; border:1px solid #E5E5E5; opacity:0; transition:.2s ease; }
+#styler .stylersection span:first-of-type { margin:0; }
+#styler .stylersection h5 { margin-bottom:15px; font:bold 10px/10px 'Open Sans', sans-serif; letter-spacing:1.2px; text-align:center; text-transform:uppercase; }
+#styler:hover { right:0; box-shadow:0 0 1px rgba(0,0,0,.3),0 0 10px rgba(0,0,0,.15); }
+#styler:hover .toggle { opacity:0; }
+#styler .stylersection span:hover, #styler .stylersection span.active { opacity:1; border-radius:0; }
+#styler .stylersection span:hover:before, #styler .stylersection span.active:before { opacity:1; border-radius:0; }
+#loadcover { width:100%; height:100%; position:fixed; top:0; left:0; background:#FFF; z-index:9999999; display:none; }
+
+/* Colours */
+
+#styler span[rel^='colour-'] { width:30px; height:30px; }
+#styler span[rel='colour-blue'] { background:#6286AA; }
+#styler span[rel='colour-turquoise'] { background:#6DA8AB; }
+#styler span[rel='colour-green'] { background:#8CA460; }
+#styler span[rel='colour-gold'] { background:#A49980; }
+#styler span[rel='colour-maroon'] { background:#8B6979; }
+
+/* Patterns */
+
+#styler span[rel^='pattern-'] { width:30px; height:30px; }
+#styler span[rel='pattern-china'] { background:url(../images/pattern-china.png); }
+#styler span[rel='pattern-horns'] { background:url(../images/pattern-horns.png); }
+#styler span[rel='pattern-concrete'] { background:url(../images/pattern-concrete.png); }
+#styler span[rel='pattern-pentagon'] { background:url(../images/pattern-pentagon.png); }
+#styler span[rel='pattern-none'] { background:#BBB; }
+
+/* Layouts */
+
+#styler span[rel^='layout-'] { width:56px; height:56px; }
+#styler span[rel='layout-full'] { background:url(../images/layout-full.png); }
+#styler span[rel='layout-contained'] { background:url(../images/layout-contained.png); }
+#styler span[rel='layout-sidebar'] { background:url(../images/layout-sidebar.png); }
+
+/* Backgrounds */
+
+#styler span[rel^='background-'] { width:40px; height:40px; margin:0 0 10px 10px; }
+#styler span[rel^='background-']:nth-child(4n+2) { margin-left:0; }
+#styler span[rel='background-beach'] { background:url(../images/background-beach.jpg); }
+#styler span[rel='background-beach2'] { background:url(../images/background-beach2.jpg); }
+#styler span[rel='background-beach3'] { background:url(../images/background-beach3.jpg); }
+#styler span[rel='background-beach4'] { background:url(../images/background-beach4.jpg); }
+#styler span[rel='background-sky'] { background:url(../images/background-sky.jpg); }
+#styler span[rel='background-sky2'] { background:url(../images/background-sky2.jpg); }
+#styler span[rel='background-forest'] { background:url(../images/background-forest.jpg); }
+#styler span[rel='background-forest2'] { background:url(../images/background-forest2.jpg); }
+#styler span[rel='background-forest3'] { background:url(../images/background-forest3.jpg); }
+#styler span[rel='background-rocks'] { background:url(../images/background-rocks.jpg); }
+#styler span[rel='background-sunset'] { background:url(../images/background-sunset.jpg); }
+#styler span[rel='background-seascape'] { background:url(../images/background-seascape.jpg); }
+#styler span[rel='background-harbour'] { background:url(../images/background-harbour.jpg); }
+#styler span[rel='background-trees'] { background:url(../images/background-trees.jpg); }
+#styler span[rel='background-river'] { background:url(../images/background-river.jpg); }
+#styler span[rel='background-city'] { background:url(../images/background-city.jpg); }
+#styler span[rel='background-city2'] { background:url(../images/background-city2.jpg); }
+#styler span[rel='background-city3'] { background:url(../images/background-city3.jpg); }
+#styler span[rel='background-silhouette'] { background:url(../images/background-silhouette.jpg); }
+#styler span[rel='background-none'] { background-color:#BBB; }
+
+/* Resize */
+
+@media only screen and (max-width:1200px) {
+#styler { display:none; }
+}
+
+@media only screen and (max-width:1150px) {
+#styler { height:185px; margin-top:-93px; }
+#styler .stylersection.layouts, #styler .stylersection.backgrounds { display:none; }
+}
+
+@media only screen and (max-width:1024px) {
+#styler .toggle { height:50px; top:50%; margin-top:-25px; }
+#styler .toggle a { top:0; margin:0; }
+}
