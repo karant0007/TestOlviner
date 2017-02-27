@@ -8,7 +8,7 @@ $(document).ready(function () {
 function BindIntents() {
     $.ajax({
         type: "POST",
-        url: "http://localhost:53111/WebService/OlvinerServices.svc/Web/Content",
+        url: "http://demolviner.somee.com/WebService/OlvinerServices.svc/Web/Content",
         data: '{}',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
