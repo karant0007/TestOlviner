@@ -3401,3 +3401,8 @@ form .error {
 	margin-right: 10px;
 	font-size: 18px;
 }
+.rm img {
+    border-radius:5%;
+    width:180px;
+    height:150px;
+}
