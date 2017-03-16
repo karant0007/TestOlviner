@@ -1,6 +1,8 @@
 ﻿$rm_CommingSoon = $('#rm_CommingSoon');
 $rm_DataSection = $('#rm_DataSection');
 $NewsBody = $('#NewsBody');
+//var url = 'http://demolviner.somee.com/WebService/OlvinerServices.svc/Web/Content';
+var url = 'http://olvinerapp.com/WebService/OlvinerServices.svc/Web/Content';
 $(document).ready(function () {
     BindIntents();
     $('#NewsModal').modal('show');
@@ -8,7 +10,7 @@ $(document).ready(function () {
 function BindIntents() {
     $.ajax({
         type: "POST",
-        url: "http://demolviner.somee.com/WebService/OlvinerServices.svc/Web/Content",
+        url: url,//"http://demolviner.somee.com/WebService/OlvinerServices.svc/Web/Content",
         data: '{}',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
