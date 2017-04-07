@@ -1,8 +1,7 @@
-﻿$rm_CommingSoon = $('#rm_CommingSoon');
+$rm_CommingSoon = $('#rm_CommingSoon');
 $rm_DataSection = $('#rm_DataSection');
 $NewsBody = $('#NewsBody');
-//var url = 'http://demolviner.somee.com/WebService/OlvinerServices.svc/Web/Content';
-var url = 'http://olvinerapp.com/WebService/OlvinerServices.svc/Web/Content';
+var url = 'http://35.165.87.199/WebService/OlvinerServices.svc/Web/Content';
 $(document).ready(function () {
     BindIntents();
     $('#NewsModal').modal('show');
@@ -10,7 +9,7 @@ $(document).ready(function () {
 function BindIntents() {
     $.ajax({
         type: "POST",
-        url: url,//"http://demolviner.somee.com/WebService/OlvinerServices.svc/Web/Content",
+        url: url,
         data: '{}',
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -31,7 +30,7 @@ function BindIntents() {
 };
 function BindNewsContents(data) {
     try {
-        if (data != undefined) {
+        if (data != undefined && data.TextContent !='') {
             $NewsBody.empty();
             $NewsBody.html(data.TextContent);
         }
@@ -40,7 +39,7 @@ function BindNewsContents(data) {
 function BindReasarchMathods(data) {
     try {
         $rm_DataSection.empty();
-        if (data != undefined) {
+        if (data != undefined && data.length > 0) {
             $rm_CommingSoon.hide();
             $rm_DataSection.show();
 
